@@ -24,19 +24,19 @@ test("Testcase 1: Validate error messages for Mandatory fields", async ({
   await page.locator(".btn-contact").click();
 
   const forenameError = await page.locator("#forename-err").textContent();
-  await expect(forenameError).toBe("Forename is required");
+  await expect.soft(forenameError).toBe("Forename is required");
 
   const emailError = await page.locator("#email-err").textContent();
-  await expect(emailError).toBe("Email is required");
+  await expect.soft(emailError).toBe("Email is required");
 
   const messageError = await page.locator("#message-err").textContent();
-  await expect(messageError).toBe("Message is required");
+  await expect.soft(messageError).toBe("Message is required");
 
   await page.locator("#forename").fill("Gurpreet");
-  await expect(await page.locator("#forename-err").count()).toEqual(0);
+  await expect.soft(await page.locator("#forename-err").count()).toEqual(0);
 
   await page.locator("#email").fill("gurpreet.singh@abc.com");
-  expect(await page.locator("#email-err").count()).toEqual(0);
+  expect.soft(await page.locator("#email-err").count()).toEqual(0);
 
   await page.locator("#message").fill("This is a sample message.");
   expect(await page.locator("#message-err").count()).toEqual(0);
