@@ -1,0 +1,47 @@
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore test results
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+
+# Ignore Playwright artifacts
+**/__image_snapshots__/
+**/__videos__/
+**/__trace__/
+**/__screenshots__/
+
+# Ignore logs and debugging files
+*.log
+*.log.*
+*.debug
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Ignore browser and device profiles (optional)
+browsers.json
+
+# Ignore generated code
+*.js.map
+
+# Ignore IDE-specific files
+.vscode/
+.DS_Store  # macOS system file
+.idea/
+
+# Ignore npm debug log
+npm-debug.log*
+
+# Ignore build and compiled files
+dist/
+build/
+.DS_Store
